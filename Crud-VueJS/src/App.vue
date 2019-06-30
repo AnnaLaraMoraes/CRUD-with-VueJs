@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
   </div>
 </template>
 
 <script>
+import bModal from 'bootstrap-vue/es/components/modal/modal'
+
 export default {
-  name: 'App'
+  name: 'app',
+  data () {
+    return {
+      themeColors: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+      modalShow: false
+    }
+  },
+  components: {
+    'b-modal': bModal
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './assets/styles/variables';
+@import './assets/styles/bootstrap';
 </style>
