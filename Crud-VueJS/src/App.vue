@@ -1,21 +1,22 @@
 <template>
   <div id="app">
+    <Navbar/>
+    <Home/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import bModal from 'bootstrap-vue/es/components/modal/modal'
+import Navbar from './components/navbar'
+import Home from './components/home'
+import Footer from './components/footer'
 
 export default {
   name: 'app',
-  data () {
-    return {
-      themeColors: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
-      modalShow: false
-    }
-  },
   components: {
-    'b-modal': bModal
+    Navbar,
+    Home,
+    Footer
   }
 }
 </script>
